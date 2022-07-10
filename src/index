@@ -1,0 +1,23 @@
+const express = require("express");
+// Fake Database
+let produtos = [];
+// Criar o APP
+const app = express()
+
+app.use(express.json());
+// Aplicar Middlewares
+
+app.post('/produtos', (req, res) => {
+    const {id, categoria, nome, marca, descrição} = req.body
+    const produto = {id, categoria, nome, marca, descrição}
+    produtos.push(produto)
+    return res.status(201).json(produto);
+});
+
+app.get('/produtos', (req, res) => {
+    const allProdutos = produtos
+    return res.status(200).json(produtos)
+});
+
+// Mandar o servidor rodar
+app.listen(3333, () => console.log('server is runing'));
