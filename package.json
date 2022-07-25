@@ -4,14 +4,23 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon src/index.js"
+    "start": "nodemon ./src/index.js"
   },
-  "keywords": [],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Andersonjmc/api-inventory-control.git"
+  },
   "author": "",
   "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Andersonjmc/api-inventory-control/issues"
+  },
+  "homepage": "https://github.com/Andersonjmc/api-inventory-control#readme",
   "dependencies": {
     "express": "^4.18.1",
+    "mongoose": "^6.4.7"
+  },
+  "devDependencies": {
     "nodemon": "^2.0.19"
   }
 }
